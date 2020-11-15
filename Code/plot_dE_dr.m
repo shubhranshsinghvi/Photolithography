@@ -1,8 +1,8 @@
-function [E,x,y] = plot_E_r(ledcord,nleds,Ir_0,th,d,z)
+function [E,x,y] = plot_dE_dr(ledcord,nleds,Ir_0,th,d,z)
     
 l=sqrt(nleds);
 
-r=0:d/10:l*d;
+r=-l*d:d/10:l*d;
 
 E=zeros(size(r));
 for i = 1:nleds
@@ -10,7 +10,8 @@ for i = 1:nleds
     E= E + (z^2 * Ir_0)*((den).^(-1));
 end
 
-plot(r,E);
+rd = (r(1:end-1)+r(2:end))/2;
+plot(rd,diff(E)./diff(r));
 xlabel('radius(m)');
 ylabel('Irradinace(W/m^2)');
 
