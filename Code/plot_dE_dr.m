@@ -1,8 +1,8 @@
-function [E,x,y] = plot_dE_dr(ledcord,nleds,Ir_0,th,d,z)
+function plot_dE_dr(ledcord,nleds,Ir_0,th,z)
     
 l=sqrt(nleds);
 
-r=-l*d:d/10:l*d;
+r=-0.03:0.001:0.03;
 
 E=zeros(size(r));
 for i = 1:nleds
@@ -13,6 +13,6 @@ end
 rd = (r(1:end-1)+r(2:end))/2;
 plot(rd,diff(E)./diff(r));
 xlabel('radius(m)');
-ylabel('Irradinace(W/m^2)');
+ylabel('Gradient of Irradinace[dE/dr](W/m^3)');
 
 end
