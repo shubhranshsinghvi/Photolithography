@@ -12,3 +12,4 @@ for k=1:nleds
     end
     ledcord(2,k)=-(l-1)*d/2 + temp*d;
 end
+

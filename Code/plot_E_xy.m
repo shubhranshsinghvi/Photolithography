@@ -1,7 +1,7 @@
-function plot_E_xy(ledcord,nleds,Ir_0,z)
+function plot_E_xy(ledcord,nleds,Ir_0,z,d)
     
 l=sqrt(nleds);
-[x,y]=meshgrid(-0.03:0.0001:0.03,-0.03:0.0001:0.03);
+[x,y]=meshgrid(-10:0.01:10,-10:0.01:10);
 
 E=zeros(size(x));
 for i = 1:nleds
@@ -9,7 +9,12 @@ for i = 1:nleds
     E= E + (z^2 * Ir_0)*((den).^(-1));
 end
 
-s=surf(x,y,E);
+a=max(max(E))*0.99
+b=a*1/0.99
+E=E.*((E>a).*(E<b));
+
+nnz(E)
+s=surface(x,y,E);
 xlabel('x-coordinate(m)');
 ylabel('y-coordinate(m)');
 zlabel('Irradinace(W/m^2)');
