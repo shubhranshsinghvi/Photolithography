@@ -1,16 +1,16 @@
-nleds=49;
+nleds=169;
 Ir_0 = 1;
-d=0.1692;
-z=0.2136;
+d=0.0733;
+z=0.1;
 %th=0;
-x_end=0;
+x_end=0.0402;
 ledcord = arrangement_1(nleds,d);
 display(E_xy_end(ledcord,nleds,Ir_0,z,d,x_end));
 
 
-ledcord = arrangement_1(nleds,d);
-figure(1)
-plot_E_xy_full(ledcord,nleds,Ir_0,z,d);
+% ledcord = arrangement_1(nleds,d);
+% figure(1)
+% plot_E_xy_full(ledcord,nleds,Ir_0,z,d);
 % figure(2)
 % plot_E_xy_full(ledcord,nleds,Ir_0,z,d);
 
