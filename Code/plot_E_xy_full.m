@@ -10,7 +10,7 @@ for i = 1:nleds
 end
 
 E_half=E>(max(E)/2);
-nnz(E_half)
+nnz(E_half);
 
 s=surface(x,y,E);
 xlabel('x-coordinate(m)');

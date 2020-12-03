@@ -2,7 +2,7 @@ function plot_E_r(ledcord,nleds,Ir_0,th,z)
     
 l=sqrt(nleds);
 
-r=0:0.0001:0.03*sqrt(2);
+r=0:0.001:0.3;
 
 E=zeros(size(r));
 for i = 1:nleds
