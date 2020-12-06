@@ -9,13 +9,13 @@ for i = 1:nleds
     E= E + (z^2 * Ir_0)*((den).^(-1));
 end
 
-E_max = max(max(E));
+
 
 s=surf(x,y,E);
 colorbar
 xlabel('x-coordinate(m)');
 ylabel('y-coordinate(m)');
 zlabel('Irradinace(W/m^2)');
-zlim([0,E_max]);
+zlim([0,500]);
 s.EdgeColor = 'none';
 end
