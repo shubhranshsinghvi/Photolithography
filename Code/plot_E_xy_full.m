@@ -1,7 +1,7 @@
 function plot_E_xy_full(ledcord,nleds,Ir_0,z,d)
     
 l=sqrt(nleds);
-[x,y]=meshgrid(-0.2:0.0005:0.2,-0.2:0.0005:0.2);
+[x,y]=meshgrid(-0.1:0.0005:0.1,-0.1:0.0005:0.1);
 
 E=zeros(size(x));
 for i = 1:nleds

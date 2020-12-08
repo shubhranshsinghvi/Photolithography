@@ -1,7 +1,7 @@
-nleds=25;
+nleds=121;
 Ir_0 = 0.1;
-d=0.075;
-z=0.469;
+d=0.025;
+z=0.035;
 th=0;
 
 ledcord = arrangement_1(nleds,d);
