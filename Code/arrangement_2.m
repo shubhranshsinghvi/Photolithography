@@ -15,7 +15,13 @@ for k=1:nleds
     end
     if(mod(k-1,l)==0 && k-1~= 0)
         temp=temp+1;
-    end
+     end
+%     if(mod(k-1,2)==0)
     ledcord(2,k)=-(l-1)*d/2 + temp*d;
+%     end
+%     if(mod(k-1,2)==1) 
+%        ledcord(2,k)=-(l-2)*d/2 + temp*d;
+%     end
+         
 end
 
