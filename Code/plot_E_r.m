@@ -2,7 +2,7 @@ function plot_E_r(ledcord,nleds,Ir_0,th,z,d)
     
 l=sqrt(nleds);
 
-r=-0.04-d/8:0.0001:0.04-d/4;
+r=-0.04:0.0001:0.04;
 E=zeros(size(r));
 for i = 1:nleds
     den=((r*cos(th)-ledcord(1,i)).^2 +(r*sin(th)-ledcord(2,i)).^2 +z^2).^2;
